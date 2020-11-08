@@ -44,6 +44,6 @@ end
 
   list.add(3)
   list.add(5)
-  puts list.get(5)
+  puts list.get(0)
 
   # => 5

@@ -1,3 +1,6 @@
+
+# Create a Stack with two methods push and pop. Use your LinkedList class to keep track of the elements internally.
+
 # Start with your code from LinkedList challenge.
 class Node
     attr_accessor :value, :next_node
@@ -10,21 +13,20 @@ class Node
   
   class Stack
     def initialize
-      @first = nil
+      @head = nil
     end
-     def is_empty?
-        @first.nil?
-      end
+ 
     def push(number)
       # your code here
-      @first = Node.new(number, @first)
+      @head = Node.new(number, @head)
     end
     
     def pop
       # your code here
-      raise "Stack is empty" if is_empty?
-      value = @first.value
-      @first = @first.next_node
+      puts 'empty' if @head.nil?
+
+      value = @head.value
+      @head = @head.next_node
       value
     end
     
@@ -46,3 +48,5 @@ class Node
   
   puts stack.pop
   # => 3
+
+  puts stack.pop
